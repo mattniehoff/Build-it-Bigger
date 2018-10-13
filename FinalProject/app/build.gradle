@@ -44,6 +44,7 @@ dependencies {
 
     // Libraries
     implementation project(':jokes')
+    implementation project(':jokeui')
 
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
