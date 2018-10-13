@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">jokeui</string>
+    <string name="joke_text_placeholder">Joke should appear here.</string>
+</resources>
