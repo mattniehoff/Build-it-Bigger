@@ -48,12 +48,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void tellJoke(View view) {
-//        Intent intent = new Intent(this, JokeActivity.class);
-//        Joker joker = new JavaJoker();
-//        intent.putExtra(JokeActivity.JOKE_EXTRA, joker.getJoke());
-//        startActivity(intent);
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
-    }
 }
