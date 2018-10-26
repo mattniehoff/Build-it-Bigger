@@ -3,6 +3,7 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.util.Pair;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 import java.io.IOException;
 
 public class EndpointsAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
+    private static final String TAG = EndpointsAsyncTask.class.getName();
     private static final String LOCALHOST_IP = "http://10.0.2.2:8080/_ah/api/";
     private static MyApi myApiService = null;
 
@@ -48,7 +50,8 @@ public class EndpointsAsyncTask extends AsyncTask<MainActivityFragment, Void, St
         try {
             return myApiService.getJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Log.e(TAG, e.getMessage());
+            return "";
         }
     }
 
