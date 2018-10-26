@@ -54,7 +54,6 @@ dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.1'
 
     // Libraries
-    implementation project(':jokes')
     implementation project(':jokeui')
 
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
