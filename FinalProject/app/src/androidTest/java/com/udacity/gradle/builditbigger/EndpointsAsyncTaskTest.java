@@ -36,7 +36,7 @@ public class EndpointsAsyncTaskTest {
     @Test
     public void joke_received_test(){
         onView(withId(R.id.get_joke_button)).perform(click());
-        onView(withId(R.id.joke_textView)).check(matches(not(withText(""))));
+        onView(withId(R.id.joke_textView)).check(matches(not(withText(R.string.joke_retrieve_fail))));
     }
 
 }
